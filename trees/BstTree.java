@@ -49,6 +49,19 @@ public class BstTree{
         }
         return root;
     }
+    Node search(int value){
+        return recursiveSearch(root, value);
+    }
+    Node recursiveSearch(Node root, int value){
+        if(root == null || root.value == value){
+            return root;
+        }
+
+        if(root.value > value){
+            return recursiveSearch(root.left, value);
+        }
+        return recursiveSearch(root.right, value);
+    }
   
   
   public static void main(String[]  args){
@@ -59,6 +72,10 @@ public class BstTree{
     
     	System.out.println(bst.getRoot().toString());
     	System.out.println(bst.getRoot().getLeft().toString());
-    	System.out.println(bst.getRoot().getRight().toString());
+        System.out.println(bst.getRoot().getRight().toString());
+        System.out.println("----------------------------");
+        System.out.println(bst.search(10).toString());
+        System.out.println(bst.search(11).toString());
+        System.out.println(bst.search(9).toString());
   }
 }
