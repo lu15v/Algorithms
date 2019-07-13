@@ -1,6 +1,6 @@
 /**
  * 
- * print the pattern  n -5, until reach 0 or negative then print n + 5 until reach the same number
+ * print the pattern  n -5, until reach 0 or negative then print n + 5 until reach the same number without using a loop
  * i.e
  *  n = 16.    16, 11, 6, 1, -4, 1, 6, 11, 16
  */
